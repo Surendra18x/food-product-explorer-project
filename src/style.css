@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  .header {
+    background-color: #343a40;
+    color: white;
+    padding: 70px;
+    text-align: center;
+    background-image: url("https://cdn4.vectorstock.com/i/1000x1000/24/33/set-of-daily-food-products-in-flat-design-vector-20422433.jpg");
+    
+  }
+  
+  .container {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #9ec2e6;
+  }
+  
+  main {
+    padding: 20px;
+  }
+
+
+  .product-list {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping to new lines */
+    justify-content: space-around; /* Space items horizontally */
+    gap: 20px; /* Add space between items */
+    padding: 20px;
+  }
+
+
+  .product-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    width: 250px;
+    flex: 0 1 auto;
+  }
+  
+  .product-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  .product-card h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .product-card p {
+    font-size: 14px;
+    color: #555;
+  }
