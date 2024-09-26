@@ -1,54 +1,56 @@
 import { useState, useEffect } from 'react';
 
-const OpenFoodFactsAPI = () => {
+const useProductList = () => {
   const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [searchQuery, setSearchQuery] = useState(''); // Add searchQuery state
-  const [category, setCategory] = useState(''); // If you want to implement category filter
-  const [page, setPage] = useState(1); // Handle pagination
+  const [isLoading, setIsLoading] = useState(false);
+  const [input, setInput] = useState("");
+  const [barcode,setBarcode] = useState([]);
+  const [productDetail, setProductDetail] = useState(null);
+  const [page, setPage] = useState(1);
+  const [hasMore, setHasMore] = useState(true);
 
-  const fetchProducts = async (query = '', category = '') => {
-    setLoading(true);
-    try {
-      const endpoint = query
-        ? `https://world.openfoodfacts.org/cgi/search.pl?search_terms=${query}&json=true`
-        : category
-          ? `https://world.openfoodfacts.org/category/${category}.json`
-          : `https://world.openfoodfacts.org?page=${page}&json=true`;
 
-      const response = await fetch(endpoint);
-      const data = await response.json();
-      console.log("result:", data);
-      if (data.products) {
-        setProducts(prevProducts => [...prevProducts, ...data.products]); // Append new products
-      } else {
-        setProducts([]); // Clear products if no data
-      }
-    } catch (error) {
-      console.error("Error fetching products:", error);
-    } finally {
-      setLoading(false);
+  const fetchProducts = async (page = 0) => {
+    const response = await fetch(`https://world.openfoodfacts.org/${page}?json=true`);
+    const data = await response.json();
+    // setProducts(data.products);
+    if (data.products.length === 0) {
+      setHasMore(false); // Stop fetching if no more products are available
+    } else {
+      setProducts((prev) => [...prev, ...data.products]); // Append new products to the existing list
     }
-  };
+    setIsLoading(false);
+  }
 
-  // Fetch products when searchQuery changes
+  const searchProducts = async (input) => {
+    const response = await fetch(`https://world.openfoodfacts.org/cgi/search.pl?search_terms=${input}&json=true`);
+    const data = await response.json();
+    setProducts(data.products);
+    setIsLoading(false);
+  }
+
+  const searchByBarcode = async (barcode) => {
+    const response = await fetch(`https://world.openfoodfacts.org/api/v0/product/${barcode}.json`)
+    const data = await response.json();
+    setProducts([data.product])
+  }
+
+
+  const fetchProductDetailByBarcode = async (barcode) => {
+    const response = await fetch(`https://world.openfoodfacts.org/api/v0/product/${barcode}.json`);
+    const data = await response.json();
+    setProductDetail(data.product);
+  };
+  
+
   useEffect(() => {
-    setProducts([]); // Clear previous products when a new search is made
-    fetchProducts(searchQuery, category);
-  }, [searchQuery, category, page]);
+    setIsLoading(true);
+    fetchProducts(page);
+  }, [page]);
 
-  // Load more products for infinite scroll
-  const loadMore = () => {
-    setPage(prevPage => prevPage + 1);
-  };
 
-  return {
-    products,
-    loading,
-    loadMore,
-    setSearchQuery, // Allow setting the search query from outside
-    setCategory, // Allow setting the category from outside
-  };
+
+  return { products, setProducts, isLoading, searchProducts,input,setInput,searchByBarcode,barcode,setBarcode,setIsLoading,fetchProductDetailByBarcode,productDetail, page, setPage, hasMore};
 };
 
-export default OpenFoodFactsAPI;
+export default useProductList;

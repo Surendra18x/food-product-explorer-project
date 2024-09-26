@@ -8,16 +8,15 @@ import OpenFoodFactsAPI from "../../../services/openFoodFactsAPI";
 import './HomeStyle.css'
 
 
+
 const Header = () => {
     const { products, setSearchQuery, setCategory } = OpenFoodFactsAPI();
 
     return (
         <header className="header">
             <h1 className="header-title">Food Product Explorer</h1>
-            <SearchBar setSearchQuery={setSearchQuery} />
-      <BarcodeSearch setProducts={setSearchQuery} />
-      <CategoryFilter setCategory={setCategory} />
-      <SortOptions products={products} setProducts={setSearchQuery} />
+            <SearchBar/>
+
             
         </header>
     );

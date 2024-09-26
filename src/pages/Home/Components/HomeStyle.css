@@ -1,246 +1,487 @@
+* {
+  box-sizing: border-box;
+}
+
 .header {
-    background-color: #343a40;
-    color: white;
-    padding: 70px;
-    text-align: center;
-    background-image: url("https://cdn4.vectorstock.com/i/1000x1000/24/33/set-of-daily-food-products-in-flat-design-vector-20422433.jpg");
-    
-  }
+  background-color: #343a40;
+  color: white;
+  padding: 70px;
+  text-align: center;
+  background-image: url("https://t3.ftcdn.net/jpg/02/51/96/76/360_F_251967663_l5Y0XFme50Oqe1WFAmeVeERhq8ZbfBuG.jpg");
+
+}
 
 
-  /* Common Styles for Inputs */
+/* Common Styles for Inputs */
 .input-field {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-bottom: 16px;
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
-  }
-  
-  .input-field:focus {
-    border-color: #007bff;
-    outline: none;
-  }
-  
-  /* Button Styles */
-  .search-btn {
-    background-color: #007bff;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-  }
-  
-  .search-btn:hover {
-    background-color: #0056b3;
-  }
-  
-  /* SearchBar Styles */
-  .search-bar-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .search-bar {
-    max-width: 400px;
-    flex-grow: 1;
-  }
-  
-  .search-bar-container button {
-    margin-left: 10px;
-  }
-  
-  /* BarcodeSearch Styles */
-  .barcode-search-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .barcode-search {
-    max-width: 400px;
-    flex-grow: 1;
-  }
-  
-  .barcode-search-container button {
-    margin-left: 10px;
-  }
-  
-  /* CategoryFilter Styles */
-  .category-filter-container {
-    max-width: 300px;
-    margin: 0 auto 20px;
-    text-align: center;
-  }
-  
-  .category-filter select {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
-  }
-  
-  .category-filter select:focus {
-    border-color: #007bff;
-  }
-  
-  .category-filter-label {
-    margin-bottom: 8px;
-    font-size: 1rem;
-    font-weight: bold;
-    display: block;
-  }
-  
+  width: 50%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
 
-  /* Sort Options Container */
+.input-field:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Button Styles */
+.search-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.search-btn:hover {
+  background-color: #0056b3;
+}
+
+/* SearchBar Styles */
+.search-bar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  max-width: 200px;
+  flex-grow: 1;
+}
+
+.search-bar-container button {
+  margin-left: 10px;
+}
+
+/* BarcodeSearch Styles */
+.barcode-search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.barcode-search {
+  max-width: 400px;
+  flex-grow: 1;
+}
+
+.barcode-search-container button {
+  margin-left: 10px;
+}
+
+/* CategoryFilter Styles */
+.category-filter-container {
+  max-width: 300px;
+  margin: 0 auto 20px;
+  text-align: center;
+}
+
+.category-filter select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.category-filter select:focus {
+  border-color: #007bff;
+}
+
+.category-filter-label {
+  margin-bottom: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  display: block;
+}
+
+
+/* Sort Options Container */
 .sort-options-container {
-    max-width: 300px;
-    margin: 0 auto 20px;
-    text-align: center;
-  }
-  
-  /* Sort Label */
-  .sort-label {
-    margin-bottom: 8px;
-    font-size: 1rem;
-    font-weight: bold;
-    display: block;
-  }
-  
-  /* Sort Dropdown */
-  .sort-dropdown {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
-  }
-  
-  .sort-dropdown:focus {
-    border-color: #007bff;
-  }
-  
+  max-width: 300px;
+  margin: 0 auto 20px;
+  text-align: center;
+}
 
-  .header-title {
-    font-size: 3rem; /* Large font size for prominence */
-    font-weight: 700; /* Bold font weight */
-    color: #343a40; /* Dark gray color */
-    text-align: center; /* Center the text */
-    margin: 20px 0; /* Spacing above and below */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-    letter-spacing: 1px; /* Spacing between letters for a modern look */
-    transition: color 0.3s ease; /* Smooth transition for color changes */
-  }
-  
-  /* Optional Hover Effect */
-  .header-title:hover {
-    color: #007bff; /* Change color on hover */
-  }
+/* Sort Label */
+.sort-label {
+  margin-bottom: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  display: block;
+}
+
+/* Sort Dropdown */
+.sort-dropdown {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.sort-dropdown:focus {
+  border-color: #007bff;
+}
 
 
+.header-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffd700;
+  text-align: center;
+  margin: 20px 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+
+}
+
+
+
+@layer demo {
+  .highlighted-text-shadow {
+    text-shadow:
+      /* regular text-shadow */
+      0 .15ch 15px var(--shadow),
+      /* text-shadow highlight */
+      0 -2px 0 var(--highlight);
+  }
+}
+
+@layer demo.support {
+  :root {
+    --hue: 320;
+    /* change me */
+    --bg: oklch(35% .3 var(--hue));
+    --text: oklch(85% .1 var(--hue));
+    --shadow: oklch(25% .2 var(--hue));
+    --highlight: oklch(98% .05 var(--hue));
+
+    h1 {
+      color: #99ffff;
+      font-size: 8vi;
+      letter-spacing: -.10ch;
+      line-height: .80;
+      margin-top: 10px;
+    }
+  }
+}
+
+.header-title:hover {
+  color: #4b0082;
+}
+
+
+body {
+  font-family: system-ui, sans-serif;
+  background-color: #87CEFA;
+  color: #343a40;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-image: url("https://as1.ftcdn.net/v2/jpg/01/16/66/84/1000_F_116668413_RBboABvUCEHK000Kom9y9B8xaohnKSYc.jpg");
+}
+
+/* Global Container */
+.container {
+  max-width: 1200px;
+  /* Maximum width for main content */
+  margin: 0 auto;
+  /* Center align the container */
+  padding: 20px;
+  /* Add padding for spacing */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   body {
-    font-family: 'Arial', sans-serif; /* Use a clean and modern font */
-    background-color: #87CEFA; /* Light gray background for a subtle look */
-    color: #343a40; /* Dark gray text for readability */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    line-height: 1.6; /* Increase line height for better readability */
+    padding: 10px;
+    /* Adjust padding for smaller screens */
   }
-  
-  /* Global Container */
-  .container {
-    max-width: 1200px; /* Maximum width for main content */
-    margin: 0 auto; /* Center align the container */
-    padding: 20px; /* Add padding for spacing */
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    body {
-      padding: 10px; /* Adjust padding for smaller screens */
-    }
-  }
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
 
 
-
-
-  /* Product Card Container */
 .product-card {
-    background-color: #ffebcd; /* White background for a clean look */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    transition: transform 0.2s ease, box-shadow 0.3s ease; /* Smooth transition on hover */
-    overflow: hidden; /* Ensures image stays within the card */
-    margin: 20px; /* Space between cards */
-    display: flex;
-    flex-direction: column;
-    max-width: 300px;
+  text-decoration: none;
+  padding: 16px;
+  background-color: #ffebcd;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Hover Effect */
+.product-card:hover {
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
+}
+
+.img_div {
+  display: flex;
+  justify-content: center;
+  padding: 12px;
+  height: 144px;
+  width: 100%;
+  background-color: white;
+  border-radius: 4px;
+}
+
+.img_div img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+
+.product-card h2 {
+  margin: 8px 0;
+  line-height: 20px;
+  font-size: 14px;
+  color: #000;
+  font-weight: 500;
+}
+
+.product-card p {
+  margin: 0;
+  line-height: 20px;
+  font-size: 14px;
+  color: #444444;
+  display: inline;
+}
+
+.product-card .content-wrapper {
+  margin-bottom: 16px;
+}
+
+.product-card p b {
+  color: #000;
+  font-weight: 500;
+}
+
+.nutrition-grade {
+  background-color: #28a745;
+  color: white;
+  padding: 6px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .product-card {
+    max-width: 100%;
+    /* Full width on smaller screens */
+    margin: 10px;
   }
-  
-  /* Product Image */
-  .product-card img {
-    width: 100%; /* Full width for image */
-    height: auto; /* Fixed height for uniform card sizes */
-    max-height: 200px;
-    object-fit: cover; /* Ensures image doesn't get distorted */
+}
+
+
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Transparent Overlay */
+.loader {
+  height: 5vh;
+  width: 5vh;
+  border-radius: 50%;
+  border: 0.75vh dotted blue;
+  animation: spinner 2s ease-in-out infinite;
+  background-color: transparent;
+}
+
+/* :not(:required) hides these rules from IE9 and below */
+.loading:not(:required) {
+  /* hide "loading..." text */
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+.loading:not(:required):after {
+  content: '';
+  display: block;
+  font-size: 10px;
+  width: 50px;
+  height: 50px;
+  margin-top: -0.5em;
+
+  border: 15px solid rgba(33, 150, 243, 1.0);
+  border-radius: 100%;
+  border-bottom-color: transparent;
+  -webkit-animation: spinner 1s linear 0s infinite;
+  animation: spinner 1s linear 0s infinite;
+
+
+}
+
+/* Animation */
+
+@-webkit-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
   }
-  
-  /* Product Content */
-  .product-card-content {
-    padding: 16px; /* Internal padding */
-    text-align: center; /* Center text */
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
-  
-  /* Product Name */
-  .product-card h3 {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: #343a40; /* Dark color for readability */
-    margin-bottom: 12px;
+}
+
+@-moz-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
   }
-  
-  /* Product Details */
-  .product-card p {
-    font-size: 0.9rem;
-    color: #6c757d; /* Light gray for less prominent info */
-    margin-bottom: 8px;
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
-  
-  /* Nutrition Grade Badge */
-  .nutrition-grade {
-    display: inline-block;
-    background-color: #28a745; /* Green color */
-    color: white;
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    margin-bottom: 12px;
+}
+
+@-o-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
   }
-  
-  /* Hover Effect */
-  .product-card:hover {
-    transform: translateY(-5px); /* Slight lift on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .product-card {
-      max-width: 100%; /* Full width on smaller screens */
-      margin: 10px;
-    }
+}
+
+@keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
   }
-  
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+
+.product-detail {
+  display: flex;
+  border: 1px solid rgba(224, 224, 224, .6235294118);
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, .1);
+  overflow: hidden;
+  color: #222;
+  margin: 100px;
+}
+
+.detail-img-div{
+  display: flex;
+  justify-content: center;
+  padding: 12px;
+  height: 300px;
+  width: 300px;
+  background-color: white;
+  border-radius: 4px;
+  margin-top: 100px;
+  margin-left: 100px;
+}
+
+.product-detail-img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 1rem;
+  size: 10vh;
+}
+
+.content-div{
+  margin:50px;
+}
+
+.product-detail h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: orange;
+}
+
+
+
+
+.product-detail p {
+  margin-bottom: 0.5rem;
+}
+
+.load-more-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  margin: 20px auto;
+}
+
+.load-more-btn:hover {
+  background-color: #0056b3;
+}
