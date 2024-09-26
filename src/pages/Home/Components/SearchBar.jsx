@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import useProductList from '../../../services/openFoodFactsAPI';
+
 
 
 const SearchBar = ({searchProducts,input,setInput,setIsLoading}) => {

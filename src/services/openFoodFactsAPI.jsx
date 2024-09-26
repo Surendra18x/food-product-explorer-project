@@ -13,11 +13,10 @@ const useProductList = () => {
   const fetchProducts = async (page = 0) => {
     const response = await fetch(`https://world.openfoodfacts.org/${page}?json=true`);
     const data = await response.json();
-    // setProducts(data.products);
     if (data.products.length === 0) {
-      setHasMore(false); // Stop fetching if no more products are available
+      setHasMore(false); 
     } else {
-      setProducts((prev) => [...prev, ...data.products]); // Append new products to the existing list
+      setProducts((prev) => [...prev, ...data.products]);
     }
     setIsLoading(false);
   }

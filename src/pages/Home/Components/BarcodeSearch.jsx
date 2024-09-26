@@ -17,7 +17,7 @@ const BarcodeSearch = ({ barcode, setBarcode, searchByBarcode }) => {
         placeholder="Enter barcode..."
         value={barcode}
         onChange={(e) => handleChange(e.target.value)}
-        className="input-field barcode-search"
+        className="input-field"
       />
       <button onClick={handleBarcodeSearch} className="search-btn">
         Search by Barcode

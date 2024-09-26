@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ProductCard from "./ProductCard";
 import './HomeStyle.css'
-import useProductList from "../../../services/openFoodFactsAPI";
+
 
 const ProductList = ({ products, isLoading,setPage, hasMore }) => {
 
@@ -11,16 +11,20 @@ const ProductList = ({ products, isLoading,setPage, hasMore }) => {
   };
 
   return !isLoading ? (
-    <div className="product-list">
+    <div>
+      <div className="product-list">
       {products.map((product) => (
-        <ProductCard product={product} />
+        <ProductCard key={product.id || product.barcode} product={product} />
       ))}
-      {hasMore && !isLoading && (
+      
+    </div>
+    {hasMore && !isLoading && (
       <button onClick={handleLoadMore} className="load-more-btn">
         Load More
       </button>
     )}
     </div>
+    
     
   ) : (
     <div className="loader-container">
