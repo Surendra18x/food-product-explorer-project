@@ -1,11 +1,8 @@
-import { Home } from "./pages/Home/Components/HomePage"
-
-
-
+import AppRouter from "./AppRouter"
 function App() {
 
   return (
-    <Home/>
+    <AppRouter/>
   )
 }
 

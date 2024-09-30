@@ -10,7 +10,8 @@ const ProductList = ({ products, isLoading,setPage, hasMore }) => {
     setPage((prevPage) => prevPage + 1);
   };
 
-  return !isLoading ? (
+  return(
+    <>
     <div>
       <div className="product-list">
       {products.map((product) => (
@@ -18,19 +19,25 @@ const ProductList = ({ products, isLoading,setPage, hasMore }) => {
       ))}
       
     </div>
-    {hasMore && !isLoading && (
-      <button onClick={handleLoadMore} className="load-more-btn">
+    {hasMore &&  (
+      <>
+      {!isLoading ? <button onClick={handleLoadMore} className="load-more-btn">
         Load More
-      </button>
+      </button>: (<div style={{height: 82.667}}>
+        </div>)}
+      </>
     )}
     </div>
     
     
-  ) : (
+   {isLoading && (
     <div className="loader-container">
       <div className="loader"></div>
     </div>
-  );
+
+  )}
+  </>
+  )
 };
 
 export default ProductList;

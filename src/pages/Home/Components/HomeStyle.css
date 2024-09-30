@@ -362,69 +362,6 @@ body {
   }
 }
 
-
-.product-detail {
-  display: flex;
-  border: 1px solid rgba(224, 224, 224, .6235294118);
-  border-radius: 24px;
-  background: #fff;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, .1);
-  overflow: hidden;
-  color: #222;
-  margin: 100px;
-}
-
-.detail-img-div{
-  display: flex;
-  justify-content: center;
-  padding: 12px;
-  height: 300px;
-  width: 300px;
-  background-color: white;
-  border-radius: 4px;
-  margin-top: 100px;
-  margin-left: 100px;
-}
-
-.product-detail-img {
-  object-fit: contain;
-  width: 100%;
-  height: 100%;
-  margin-bottom: 1rem;
-}
-
-.content-div{
-  margin:50px;
-}
-
-.product-detail h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: orange;
-}
-
-
-
-
-.product-detail p {
-  margin-bottom: 0.5rem;
-}
-
-@media (max-width: 768px) {
-  .product-detail {
-    flex-direction: column;
-    margin: 20px;
-  }
-  
-  .detail-img-div {
-    margin: 20px auto;
-  }
-
-  .content-div {
-    margin: 20px;
-  }
-}
-
 .load-more-btn {
   background-color: #007bff;
   color: white;
@@ -439,4 +376,75 @@ body {
 
 .load-more-btn:hover {
   background-color: #0056b3;
+}
+
+
+.category-filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  flex-direction: column;
+}
+
+.category-label {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.category-select {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  color: #333;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.category-select:focus {
+  border-color: #007BFF;
+}
+
+.category-select option {
+  font-size: 16px;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .category-select {
+    width: 90%;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .category-select {
+    width: 100%;
+    font-size: 12px;
+  }
+
+  .category-label {
+    font-size: 14px;
+  }
+}
+
+footer{
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  height: 200px;
+  width: 100%;
+  background-color: #87CEFA;
+}
+
+.footer-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -1,11 +1,13 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import useProductList from '../../../services/openFoodFactsAPI';
-import './HomeStyle.css'
+import useProductList from '../../services/openFoodFactsAPI';
+import './ProductDetailStyle.css'
 
 const ProductDetail = () => {
   const { barcode } = useParams();
   const { fetchProductDetailByBarcode, productDetail } = useProductList();
+
+  console.log("===>",productDetail);
 
   useEffect(() => {
     fetchProductDetailByBarcode(barcode);
