@@ -20,12 +20,12 @@ const ProductList = ({ products, isLoading,setPage, hasMore }) => {
       
     </div>
     {hasMore &&  (
-      <>
+      <div className="load-more-div">
       {!isLoading ? <button onClick={handleLoadMore} className="load-more-btn">
         Load More
       </button>: (<div style={{height: 82.667}}>
         </div>)}
-      </>
+      </div>
     )}
     </div>
     

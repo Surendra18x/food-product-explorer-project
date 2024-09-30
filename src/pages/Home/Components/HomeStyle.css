@@ -3,46 +3,85 @@
 }
 
 .header {
-  background-color: #343a40;
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 64px 128px;
+  background-image: url("https://static.vecteezy.com/system/resources/previews/047/022/332/non_2x/fresh-ingredients-arranged-around-black-wooden-surface-free-photo.jpeg");
+  background-position: center;
+  margin-bottom: 20px;
+}
+
+.header-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.header-text-container .description {
+  color: #DADADA;
+  font-size: 24px;
+  margin-top: 0;
+}
+
+.header-text-container .main-text {
+  margin: 0;
+  font-size: 70px;
+  text-wrap: nowrap;
   color: white;
-  padding: 70px;
-  text-align: center;
-  background-image: url("https://t3.ftcdn.net/jpg/02/51/96/76/360_F_251967663_l5Y0XFme50Oqe1WFAmeVeERhq8ZbfBuG.jpg");
-
+  text-shadow: 0 2px white, 0 3px #777;
 }
 
-.header-title {
-  font-size: 3rem;
+.main-text span{
+  color: #28a745;
+}
+
+.description-qoute{
+  color: white;
+  font-size: 20px;
   font-weight: 700;
-  color: #ffd700;
-  text-align: center;
-  margin: 20px 0;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  letter-spacing: 1px;
-  transition: color 0.3s ease;
-
+  margin-top: 0px;
+  font-family: 'Orienta', sans-serif;
 }
 
-.header-title:hover {
-  color: #4b0082;
+.description-qoute span{
+  color: #99c7f8;
+  font-weight: 500;
+  font-family: 'Orienta', sans-serif;
+}
+
+.header-list-wrapper{
+  min-height: 100vh;
 }
 
 @media (max-width: 768px) {
   .header {
     padding: 30px;
   }
-  .header-title {
-    font-size: 2rem;
-  }
+}
+.search-wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 40vh;
 }
 
+.search-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+
 .input-field {
-  width: 50%;
+  width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
-  margin-bottom: 16px;
   font-size: 1rem;
   transition: border-color 0.3s ease;
 }
@@ -52,15 +91,9 @@
   outline: none;
 }
 
-.search-bar-container,.barcode-search-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
 .search-btn {
   background-color: #007bff;
+  max-width: 90px;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -74,61 +107,19 @@
   background-color: #0056b3;
 }
 
-.search-bar-container button,.barcode-search-container button {
-  margin-left: 10px;
-}
-
 @media (max-width: 768px) {
   .input-field {
     width: 90%;
   }
 }
 
-
-
-
-
-
-@layer demo {
-  .highlighted-text-shadow {
-    text-shadow:
-      /* regular text-shadow */
-      0 .15ch 15px var(--shadow),
-      /* text-shadow highlight */
-      0 -2px 0 var(--highlight);
-  }
-}
-
-@layer demo.support {
-  :root {
-    --hue: 320;
-    /* change me */
-    --bg: oklch(35% .3 var(--hue));
-    --text: oklch(85% .1 var(--hue));
-    --shadow: oklch(25% .2 var(--hue));
-    --highlight: oklch(98% .05 var(--hue));
-
-    h1 {
-      color: #99ffff;
-      font-size: 8vi;
-      letter-spacing: -.10ch;
-      line-height: .80;
-      margin-top: 10px;
-    }
-  }
-}
-
-
-
-
 body {
   font-family: system-ui, sans-serif;
-  background-color: #87CEFA;
+  background-color: snow;
   color: #343a40;
   margin: 0;
   padding: 0;
   line-height: 1.6;
-  background-image: url("https://as1.ftcdn.net/v2/jpg/01/16/66/84/1000_F_116668413_RBboABvUCEHK000Kom9y9B8xaohnKSYc.jpg");
 }
 
 
@@ -362,6 +353,11 @@ body {
   }
 }
 
+.load-more-div{
+  display: flex;
+  justify-content: center;
+}
+
 .load-more-btn {
   background-color: #007bff;
   color: white;
@@ -436,9 +432,10 @@ body {
 
 footer{
   display: flex;
+  flex-direction: column;
   justify-content: center;
   color: #fff;
-  height: 200px;
+  padding: 24px;
   width: 100%;
   background-color: #87CEFA;
 }

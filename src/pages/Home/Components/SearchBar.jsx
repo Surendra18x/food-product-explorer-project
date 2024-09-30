@@ -2,36 +2,37 @@ import React,{useState} from 'react';
 
 
 
-const SearchBar = ({searchProducts,input,setInput,setIsLoading}) => {
+const SearchBar = ({
+  text,
+  setText,
+  placeholder,
+  onSubmit,
+  buttonText = "Search",
+}) => {
+  const handleChange = (e) => {
+    const value = e.target.value;
+    setText(value);
+  };
 
-  
-  
-  const handleChange = (value) => {
-    setInput(value);
-  }
-
-  const handleSearch = () => {
-    searchProducts(input);
-    setIsLoading(true);
-  }
+  const onKeyPress = (e) => {
+    if (e.key === "Enter") {
+      onSubmit();
+    }
+  };
 
   return (
     <div className="search-container">
-    
-    <input
+      <input
         type="text"
-        placeholder="Search for products..."
-        value={input}
-        onChange={(e) => handleChange(e.target.value)}
-        onKeyDown={(e) => {
-          if(e.key === "Enter"){
-            {this.handleSearch}
-          }
-        }}
+        placeholder={placeholder}
+        value={text}
+        onChange={handleChange}
+        onKeyDown={onKeyPress}
         className="input-field"
       />
-      <button className='search-btn' onClick={handleSearch}>Search</button>
-
+      <button className="search-btn" onClick={onSubmit}>
+        {buttonText}
+      </button>
     </div>
   );
 };
